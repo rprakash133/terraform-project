@@ -20,7 +20,7 @@ subnets_subnet_id            = ["subnet-###"]
 security_group_ids           = ["sg-###"]
 
 s3_bucket_id                   = "ravi-terraform"
-full_repository_id             = "rprakash133/terraform-cicd"
+full_repository_id             = "rprakash133/terraform-project"
 codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/f2935c74-df8c-47db-b8e6-e5f9c776270b"
 availability_zone              = "us-east-1"
 ami                            = "ami-07d9b9ddc6cd8dd30"
