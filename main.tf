@@ -52,4 +52,4 @@ module "ec2" {
   ami               = var.ami
   availability_zone = var.availability_zone
   tags              = local.tags
-}yes
+}
