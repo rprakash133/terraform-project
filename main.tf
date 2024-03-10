@@ -47,9 +47,9 @@ module "codebuild" {
 }
 
 
-# module "ec2" {
-#   source            = "./modules/module-aws-ec2"
-#   ami               = var.ami
-#   availability_zone = var.availability_zone
-#   tags              = local.tags
-# }yes
+module "ec2" {
+  source            = "./modules/module-aws-ec2"
+  ami               = var.ami
+  availability_zone = var.availability_zone
+  tags              = local.tags
+}yes

@@ -1,4 +1,4 @@
-# data "aws_ami" "test1" {
+# data "aws_ami" "cicd-pro" {
 #   most_recent = true
 
 #   filter {
@@ -13,8 +13,8 @@
 # }
 
 
-resource "aws_instance" "test1" {
-  ami                         = var.ami #data.aws_ami.test1.id
+resource "aws_instance" "cicd-pro" {
+  ami                         = var.ami #data.aws_ami.cicd-pro.id
   instance_type               = var.instance_type
   associate_public_ip_address = var.associate_public_ip_address
   availability_zone           = var.availability_zone
@@ -29,18 +29,18 @@ resource "aws_instance" "test1" {
 
 
 
-resource "aws_ebs_volume" "test1" {
+resource "aws_ebs_volume" "cicd-pro" {
   availability_zone = var.availability_zone
   size              = 40
 }
 
-resource "aws_volume_attachment" "test1" {
+resource "aws_volume_attachment" "cicd-pro" {
   device_name = "/dev/sdh"
-  volume_id   = aws_ebs_volume.test1.id
-  instance_id = aws_instance.test1.id
+  volume_id   = aws_ebs_volume.cicd-pro.id
+  instance_id = aws_instance.cicd-pro.id
 }
 
-resource "aws_cloudwatch_metric_alarm" "test1" {
+resource "aws_cloudwatch_metric_alarm" "cicd-pro" {
 
   alarm_name                = "cpu-utilization"
   comparison_operator       = "GreaterThanOrEqualToThreshold"
@@ -50,11 +50,11 @@ resource "aws_cloudwatch_metric_alarm" "test1" {
   period                    = "120" #seconds
   statistic                 = "Average"
   threshold                 = "80"
-  alarm_description         = "test1 metric monitors ec2 cpu utilization"
+  alarm_description         = "cicd-pro metric monitors ec2 cpu utilization"
   insufficient_data_actions = []
 
   dimensions = {
-    InstanceId = aws_instance.test1.id
+    InstanceId = aws_instance.cicd-pro.id
   }
 
 }
