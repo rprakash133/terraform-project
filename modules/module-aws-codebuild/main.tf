@@ -1,8 +1,8 @@
-resource "aws_codebuild_project" "this" {
+resource "aws_codebuild_project" "cicd-pro" {
   name          = var.project_name
   description   = var.project_desc
   build_timeout = var.build_timeout
-  service_role  = aws_iam_role.this.arn
+  service_role  = aws_iam_role.cicd-pro.arn
 
   artifacts {
     type = var.artifacts_type

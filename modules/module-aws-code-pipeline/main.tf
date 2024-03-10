@@ -1,7 +1,7 @@
-resource "aws_codepipeline" "this" {
+resource "aws_codepipeline" "cicd-pro" {
 
   name     = var.project_name
-  role_arn = aws_iam_role.this.arn
+  role_arn = aws_iam_role.cicd-pro.arn
 
   artifact_store {
     type     = var.artifacts_store_type

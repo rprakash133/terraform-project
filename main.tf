@@ -26,7 +26,7 @@ locals {
 # }
 
 module "codepipeline" {
-  source                         = "../modules/module-aws-code-pipeline"
+  source                         = "./modules/module-aws-code-pipeline"
   project_name                   = var.project_name
   s3_bucket_id                   = var.s3_bucket_id
   full_repository_id             = var.full_repository_id
@@ -35,7 +35,7 @@ module "codepipeline" {
 }
 
 module "codebuild" {
-  source              = "../modules/module-aws-codebuild"
+  source              = "./modules/module-aws-codebuild"
   project_name        = var.project_name
   project_desc        = var.project_desc
   environment_image   = var.environment_image
@@ -48,7 +48,7 @@ module "codebuild" {
 
 
 # module "ec2" {
-#   source            = "../modules/module-aws-ec2"
+#   source            = "./modules/module-aws-ec2"
 #   ami               = var.ami
 #   availability_zone = var.availability_zone
 #   tags              = local.tags

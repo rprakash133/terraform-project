@@ -1,4 +1,4 @@
-resource "aws_iam_role" "this" {
+resource "aws_iam_role" "cicd-pro" {
   name = var.role_name
 
   assume_role_policy = <<EOF
@@ -17,7 +17,7 @@ resource "aws_iam_role" "this" {
 EOF
 }
 
-data "aws_iam_policy_document" "this" {
+data "aws_iam_policy_document" "cicd-pro" {
   statement {
     sid       = ""
     actions   = ["cloudwatch:*", "s3:*", "codebuild:*"]
@@ -32,14 +32,14 @@ data "aws_iam_policy_document" "this" {
   }
 }
 
-resource "aws_iam_policy" "this" {
+resource "aws_iam_policy" "cicd-pro" {
   name        = var.policy_name
   path        = "/"
   description = "CodePipeline policy"
-  policy      = data.aws_iam_policy_document.this.json
+  policy      = data.aws_iam_policy_document.cicd-pro.json
 }
 
 resource "aws_iam_role_policy_attachment" "attachment" {
-  policy_arn = aws_iam_policy.this.arn
-  role       = aws_iam_role.this.id
+  policy_arn = aws_iam_policy.cicd-pro.arn
+  role       = aws_iam_role.cicd-pro.id
 }
