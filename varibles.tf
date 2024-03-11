@@ -25,4 +25,4 @@ variable "codestar_connector_credentials" {}
 variable "availability_zone" {}
 # variable "ami" {}
 variable "Project" {}
-#variable "aws_region" {}
+variable "aws_region" {}

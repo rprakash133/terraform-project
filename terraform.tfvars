@@ -12,6 +12,7 @@ environment_variables = {
   value = "VALUE"
   type  = "PLAINTEXT"
 }
+
 report_build_status = false
 source_version      = "main"
 #buildspec_file_absolute_path = "./buildspec/buildspec.yml"
@@ -20,11 +21,11 @@ source_version      = "main"
 # security_group_ids           = ["sg-###"]
 
 s3_bucket_id                   = "ravi-terraform"
-full_repository_id             = "rprakash133/terraform-project"
+full_repository_id             = "https://github.com/rprakash133/tf-codepipeline.git"
 codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/f2935c74-df8c-47db-b8e6-e5f9c776270b"
 availability_zone              = "us-east-1a"
 # ami                            = "ami-07d9b9ddc6cd8dd30"
-aws_region                     = "us-east-1"
+aws_region      = "us-east-1"
 region          = "us-east-1"
 source_location = ""
 Project         = "terraform-cicd"
