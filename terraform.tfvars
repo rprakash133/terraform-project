@@ -22,7 +22,7 @@ source_version      = "main"
 
 s3_bucket_id                   = "ravi-terraform"
 full_repository_id             = "https://github.com/rprakash133/tf-codepipeline.git"
-codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/f2935c74-df8c-47db-b8e6-e5f9c776270b"
+codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/44add9fd-7159-41a6-bb55-aeb25e3140c4"
 availability_zone              = "us-east-1a"
 # ami                            = "ami-07d9b9ddc6cd8dd30"
 aws_region      = "us-east-1"
