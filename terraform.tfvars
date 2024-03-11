@@ -15,7 +15,7 @@ environment_variables = {
 
 report_build_status = false
 source_version      = "main"
-buildspec_file_absolute_path   = "./buildspec/buildspec.yml"
+#buildspec_file_absolute_path   = "./buildspec/buildspec.yml"
 # vpc_id                       = "vpc-##"
 # subnets_subnet_id            = ["subnet-###"]
 # security_group_ids           = ["sg-###"]

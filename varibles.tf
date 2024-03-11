@@ -12,7 +12,7 @@ variable "dockerhub_credentials" {}
 variable "credentials_provider" {}
 variable "report_build_status" {}
 variable "source_version" {}
-variable "buildspec_file_absloute_path" {}
+#variable "buildspec_file_absloute_path" {}
 # variable "vpc_id" {}
 # #variable "subnet_id" {}
 # variable "security_group_ids" {}
