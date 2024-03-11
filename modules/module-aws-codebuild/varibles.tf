@@ -155,7 +155,7 @@ variable "fetch_submodules" {
 variable "buildspec_file_absolute_path" {
   description = "buildspec_file_absolute_path"
   type        = string
-  default     = "../terraform-project/buildspec/plan-buildspec.yml"
+  default     = "./buildspec/buildspec.yml"
 }
 
 variable "role_name" {
