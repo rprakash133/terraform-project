@@ -15,15 +15,6 @@ locals {
   }
 }
 
-# locals {
-#   tags = {
-#     Project     = "cicd-proj"
-#     CreatedBy   = "ravi"
-#     CreatedOn   = timestamp()
-
-#     Environment = "Aws-terraform"
-#   }
-# }
 
 module "codepipeline" {
   source                         = "./modules/module-aws-code-pipeline"
@@ -44,12 +35,4 @@ module "codebuild" {
   source_version      = var.source_version
   #buildspec_absloute_path       = var.buildspec_file_absolute_path
   tags = local.tags
-}
-
-
-module "ec2" {
-  source            = "./modules/module-aws-ec2"
-  ami               = var.ami
-  availability_zone = var.availability_zone
-  tags              = local.tags
 }
