@@ -47,7 +47,7 @@ resource "aws_codebuild_project" "cicd-pro" {
     location            = var.source_location
     git_clone_depth     = 1
     report_build_status = var.report_build_status
-    buildspec           = var.buildspec_file_absolute_path
+    buildspec           = "./buildspec/buildspec.yml"
     git_submodules_config {
       fetch_submodules = var.fetch_submodules
     }
