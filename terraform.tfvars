@@ -2,7 +2,7 @@ project                  = "cicd-pipeline"
 createdBy                = "Ravi"
 project_name             = "cicdpipeline"
 project_desc             = "codebuild project"
-environment_compute_type = "BUILD_GENERAl1_SMALL"
+environment_compute_type             = "BUILD_GENERAl1_SMALL"
 environment_image        = "hashicorp/terraform:1.1.0"
 environment_type         = "LINUX_CONTAINER"
 dockerhub_credentials    = ""
@@ -18,7 +18,7 @@ source_version      = "main"
 # vpc_id                       = "vpc-##"
 # subnets_subnet_id            = ["subnet-###"]
 # security_group_ids           = ["sg-###"]
-
+buildspec_file_absolute_path   = "./buildspecyml"
 s3_bucket_id                   = "ravi-terraform"
 full_repository_id             = "rprakash133/terraform-project"
 codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/44add9fd-7159-41a6-bb55-aeb25e3140c4"

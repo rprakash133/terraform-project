@@ -8,6 +8,7 @@ variable "region" {}
 variable "project_name" {}
 variable "project_desc" {}
 variable "environment_image" {}
+variable "environment_compute_type" {}
 variable "dockerhub_credentials" {}
 variable "credentials_provider" {}
 variable "report_build_status" {}
@@ -16,7 +17,7 @@ variable "source_version" {}
 # #variable "subnet_id" {}
 # variable "security_group_ids" {}
 variable "source_location" {}
-
+variable "buildspec_file_absolute_path" {}
 #code pipeline
 variable "s3_bucket_id" {}
 variable "full_repository_id" {}

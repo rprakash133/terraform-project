@@ -9,9 +9,9 @@ resource "aws_codebuild_project" "cicd-pro" {
   }
 
   environment {
-    compute_type                = var.environment_compute_type
+    compute_type                = var.compute_type
     image                       = var.environment_image
-    type                        = var.environment_type
+    type                        = var.type
     image_pull_credentials_type = var.image_pull_credentials_type
     privileged_mode             = var.privileged_mode_enabled
     # registry_credential {

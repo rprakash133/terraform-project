@@ -29,9 +29,12 @@ module "codebuild" {
   source              = "./modules/module-aws-codebuild"
   project_name        = var.project_name
   project_desc        = var.project_desc
+  compute_type        = var.environment_compute_type
+  type                = var.environment_image
   environment_image   = var.environment_image
   source_location     = var.source_location
   report_build_status = var.report_build_status
   source_version      = var.source_version
+  buildspec_file_absolute_path = var.buildspec_file_absolute_path
   tags = local.tags
 }

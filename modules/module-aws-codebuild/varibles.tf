@@ -43,19 +43,19 @@ variable "artifacts_type" {
   default     = "CODEPIPELINE"
 }
 
-variable "environment_compute_type" {
+variable "compute_type" {
   description = "environment_compute_type"
   type        = string
-  default     = "BUILD_GENERAL1_SMALL"
+  default     = "BUILD_GENERAL1_SMALL BUILD"
 }
 
 variable "environment_image" {
   description = "environment_image"
   type        = string
-  default     = null
+  default     = "LINUX_CONTAINER"
 }
 
-variable "environment_type" {
+variable "type" {
   description = "environment_type"
   type        = string
   default     = "LINUX_CONTAINER"
