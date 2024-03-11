@@ -33,6 +33,5 @@ module "codebuild" {
   source_location     = var.source_location
   report_build_status = var.report_build_status
   source_version      = var.source_version
-  #buildspec_absloute_path       = var.buildspec_file_absolute_path
   tags = local.tags
 }
