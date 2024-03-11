@@ -20,7 +20,7 @@ source_version      = "main"
 # security_group_ids           = ["sg-###"]
 
 s3_bucket_id                   = "ravi-terraform"
-full_repository_id             = "https://github.com/rprakash133/tf-codepipeline.git"
+full_repository_id             = "https://github.com/rprakash133/terraform-project.git"
 codestar_connector_credentials = "arn:aws:codestar-connections:us-east-1:112668912639:connection/44add9fd-7159-41a6-bb55-aeb25e3140c4"
 availability_zone              = "us-east-1a"
 # ami                          = "ami-07d9b9ddc6cd8dd30"
