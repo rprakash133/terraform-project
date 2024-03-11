@@ -2,12 +2,15 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
-      - apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-      - apt-get update && apt-get install -y terraform
+      - # Install Terraform
+      - wget https://releases.hashicorp.com/terraform/1.7.4/terraform_1.2.0_linux_amd64.zip
+      - unzip terraform_1.7.4_linux_amd64.zip
+      - mv terraform /usr/local/bin/
+      - terraform --version
   
   build:
     commands:
-      -  /opt/terraform/terraform init
+      - terraform init
       - terraform validate
+      - terraform plan
       - terraform apply --auto-approve
