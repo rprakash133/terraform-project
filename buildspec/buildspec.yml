@@ -2,10 +2,10 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - sudo yum install -y yum-utils
-      - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-      - sudo yum makecache fast
-      - sudo yum install -y terraform
+      - curl -s -qL -o terraform_install.zip https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_linux_amd64.zip
+      - unzip terraform_install.zip -d /usr/bin/
+      - chmod +x /usr/bin/terraform
+      - terraform --version
       - terraform init
       - terraform validate
       - terraform plan --auto-approve
