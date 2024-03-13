@@ -1,16 +1,24 @@
 version: 0.2
+
 phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      # Install Terraform
+      - curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+      - sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+      - sudo apt-get update && sudo apt-get install terraform
+
   pre_build:
     commands:
-      - yum install curl -y
-      - curl -s -qL -o terraform_install.zip https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_linux_amd64.zip
-      - unzip terraform_install.zip -d /usr/bin/
-      - chmod +x /usr/bin/terraform
-      - terraform --version
-      - terraform init
-      - terraform validate
-      - terraform plan --auto-approve
-  
+      # (Optional) Pre-build commands if needed
+
   build:
     commands:
-      - terraform apply --auto-approve
+      # Initialize Terraform
+      - terraform init
+
+      # Apply Terraform configuration
+      - terraform apply -auto-approve
+
