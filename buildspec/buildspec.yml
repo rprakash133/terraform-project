@@ -2,7 +2,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - sudo yum install curl.x86_64-y
+      - yum install curl.x86_64-y
       - curl -s -qL -o terraform_install.zip https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_linux_amd64.zip
       - unzip terraform_install.zip -d /usr/bin/
       - chmod +x /usr/bin/terraform
