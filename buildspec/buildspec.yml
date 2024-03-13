@@ -6,9 +6,8 @@ phases:
       python: 3.8
     commands:
       # Install Terraform
-      - wget -O - https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-      - sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-      - sudo apt-get update && sudo apt-get install terraform
+      - sudo yum install -y yum-utils
+      - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/$basearch
 
   pre_build:
     commands:
