@@ -8,7 +8,6 @@ variable "region" {}
 variable "project_name" {}
 variable "project_desc" {}
 variable "environment_image" {}
-variable "environment_compute_type" {}
 variable "dockerhub_credentials" {}
 variable "credentials_provider" {}
 variable "report_build_status" {}
